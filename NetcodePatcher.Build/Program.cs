@@ -92,7 +92,7 @@ public sealed class GatherConstantsTask : AsyncFrostingTask<BuildContext>
 {
     public IEnumerable<string> ComputeUnityVersionConstants(BuildContext ctx)
     {
-        if (ctx.UnityVersion < UnityVersion.Parse("2021.1.0"))
+        if (ctx.UnityVersion < UnityVersion.Parse("2020.1.0"))
             throw new ArgumentOutOfRangeException(nameof(UnityVersion), "Unity version must be >=2020.1.0.");
 
         var versionConstants = new LinkedList<string>();
